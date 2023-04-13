@@ -1,8 +1,12 @@
+import Intro from "../../components/Intro";
+import Main from "../../components/Main";
+
 const Home = () =>{
 
     return(
         <>
-        <h1>Homepage</h1>
+        <Main/>
+        <Intro/>
         </>
     )
 }

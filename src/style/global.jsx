@@ -2,13 +2,13 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   :root {
-    --color-background: #FFF;
-    --color-primary: #F2A30B;
-    --color-primary-light: #FCC761;
+    --color-background: #fff;
+    --color-primary: #675D50;
+    --color-primary-light: #A9907E;
     --color-secondary: #0C2FDF;
     --color-tertiary: #FFE182;
-    --color-text: #252525;
-    --color-text2: #FFF;
+    --color-text: #FFF;
+    --color-text2: #252525;
     --color-red: #B4423E; 
     --color-success: #7CC39C;
     --color-warning: #FBEA85;
@@ -37,67 +37,85 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  nav{
-    height: 80px;
-    background: var(--color-primary);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--color-text2);
-    padding: 0px 20px;
+  .main{
+    height: 100vh;
+    background-image: url(https://img.freepik.com/fotos-gratis/jovem-na-barbearia-aparando-cabelo_1303-26254.jpg?w=740&t=st=1681391546~exp=1681392146~hmac=cf9182c2cd5813af444d710a09b2a4891d274cb2bc5e159117e2660c0efcac0b);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
-  ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-height: 85vh;
+.main-content{
+    background-color: rgba(0, 0, 0, 0.7);
+    height:100vh;
+    width:100vw;
+    display:flex;
     flex-wrap: wrap;
-    overflow-x: auto;
-    gap: 25px 25px;
-    list-style-type:none;
-    padding: 15px;
+    justify-content: center;
+    align-items:center;
+}
+.section-main{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
-  li{
-    max-width:22vw;
-    min-width:22vw;
-    min-height: 40vh;
-    border-radius: 10px;
-    outline: thick solid var(--color-primary-light);
-    box-shadow: 5px 5px 5px gray;
+
+.principal{
+    border: 4px solid #fff;
+    width: 60vw;
+    height:300px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.button-whats{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.low-container, .low-container-mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 33vw;
     
     &:hover{
-        cursor:pointer;
-        box-shadow: 5px 5px 5px #F2A30B;
-        transition: 0.75s;
+        background-color: rgba(100, 100, 100, 0.9);
+        width: 34vw;
+        cursor: pointer;
+        transition: 0.5s;
     }
+}
+.section-intro{
+    height: 60vh;
+    color: var(--color-text2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
   }
-  li > img{
-    max-width:22vw;
-    border-radius: 10px;
+  .section-intro > img{
+    max-width: 30vw;
+    object-fit:scale-down;
   }
-  .info_sites{
-    padding:10px;
-    max-width:20vw;
+  .intro-text{
+    width:30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color: grey;
   }
+  
   @media(max-width: 800px) {
-    ul{
-        overflow-y: auto;
-        flex-wrap:nowrap;
-        min-height:80vh;
-        justify-content: space-between;
-    }
-    li{
-        min-width:85vw;
-        margin-left:5vw;
-    }
-    li > img{
-        max-width:85vw;
-        border-top: 10px
-    }
-    .info_sites{
-        min-width:85vw;
-    }
+    
   }
   body, input, button, textarea {
     font-family: 'Roboto';
