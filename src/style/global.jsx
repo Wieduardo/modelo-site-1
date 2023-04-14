@@ -111,9 +111,125 @@ export default createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content:center;
-    background-color: grey;
+    &>h4{
+        color: #675D50;
+        margin: 10px 0;
+        font-weight: bold;
+        font-size:2rem;
+    };
+    &>h3{
+        font-weight: bold;
+        font-size: 2rem;
+    }
   }
-  
+  .section-servicos{
+    height: 55vh;
+    background-color: #e9e6d7;
+    color: var(--color-primary);
+    box-shadow: -5px -10px 10px #e9e6d7, -5px 10px 10px #e9e6d7;
+  }
+  .servicos-container{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    overflow-y: scroll;
+    list-style-type:none;
+  }
+  .servico-card{
+    width:15vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    border-radius: 10px;
+    outline: 4px solid var(--color-primary-light);
+    background-color: var(--color-background);
+    box-shadow: 5px 5px 5px gray;
+
+    &>span{
+      font-size: 75px;
+    }
+
+    &>img{
+      max-width:15vw;
+      border-radius: 10px;
+    }
+  }
+
+  .footer-container{
+    min-height: 35vh;
+    color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    &>h3 {
+      padding:20px 0;
+    }
+  }
+
+  .media-container{
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .footer-media{
+    width: 40vw;
+    list-style-type:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-right: 2px solid #675D50;
+  }
+
+  .icon-face,.icon-twit,.icon-insta,.icon-whats{
+    color: var(--color-primary);
+    font-size:40px;
+
+    &:hover{
+      transition: 0.75s;
+    }
+  }
+
+  .icon-whats{
+    &:hover{
+      color: #25D366;
+    }
+  }
+
+  .icon-twit{
+    &:hover{
+      color: #1DA1F2;
+    }
+  }
+
+  .icon-insta{
+    &:hover{
+      color: #833AB4;
+    }
+  }
+
+  .icon-face{
+    &:hover{
+      color: #4267B2;
+    }
+  }
+
+  .footer-endereco{
+    width: 40vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   @media(max-width: 800px) {
     
   }

@@ -1,5 +1,7 @@
+import Footer from "../../components/Footer";
 import Intro from "../../components/Intro";
 import Main from "../../components/Main";
+import Servicos from "../../components/Servicos";
 
 const Home = () =>{
 
@@ -7,6 +9,8 @@ const Home = () =>{
         <>
         <Main/>
         <Intro/>
+        <Servicos/>
+        <Footer/>
         </>
     )
 }

@@ -1,3 +1,4 @@
+import { GlobalProvider } from "./providers/global";
 import MainRoutes from "./routes";
 import Global from "./style/global";
 
@@ -5,8 +6,10 @@ import Global from "./style/global";
 function App() {
   return (
     <>
-    <Global/>
-    <MainRoutes/>
+    <GlobalProvider>
+      <Global/>
+      <MainRoutes/>
+    </GlobalProvider>
     </>
   );
 }
