@@ -95,7 +95,7 @@ export default createGlobalStyle`
     }
 }
 .section-intro{
-    height: 60vh;
+    height: 75vh;
     color: var(--color-text2);
     display: flex;
     flex-direction: row;
@@ -124,22 +124,27 @@ export default createGlobalStyle`
   }
   .section-servicos{
     height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #e9e6d7;
     color: var(--color-primary);
     box-shadow: -5px -10px 10px #e9e6d7, -5px 10px 10px #e9e6d7;
   }
   .servicos-container{
     min-height: 50vh;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    overflow-y: scroll;
+    overflow-x: scroll;
     list-style-type:none;
   }
   .servico-card{
-    width:15vw;
+    width: 15vw;
+    min-width:260px;
     height: 35vh;
     display: flex;
     flex-direction: column;
@@ -149,14 +154,8 @@ export default createGlobalStyle`
     outline: 4px solid var(--color-primary-light);
     background-color: var(--color-background);
     box-shadow: 5px 5px 5px gray;
-
     &>span{
       font-size: 75px;
-    }
-
-    &>img{
-      max-width:15vw;
-      border-radius: 10px;
     }
   }
 
@@ -224,14 +223,46 @@ export default createGlobalStyle`
 
   .footer-endereco{
     width: 40vw;
-    height: 20vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   @media(max-width: 800px) {
-    
+
+    .low-container, .low-container-mid {
+      text-align: center;
+    }
+    .section-intro{
+      flex-direction: column-reverse;
+      align-items: center;
+      &>img{
+        max-width:50vw;
+      }
+    }
+    .intro-text{
+      width: 80vw;
+    }
+    .servicos-container{
+      justify-content: flex-start;
+      padding:0 20px;
+    }
+    .servico-card{
+      min-width:250px;
+    }
+    .media-container{
+      flex-direction:column;
+      align-items: center;
+    }
+    .footer-media{
+      border-right: none;
+      width: 90vw;
+    }
+    .footer-endereco{
+      width: 90vw;
+      min-height:10vh;
+    }
   }
   body, input, button, textarea {
     font-family: 'Roboto';
